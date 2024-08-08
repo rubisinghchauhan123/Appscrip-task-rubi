@@ -1184,11 +1184,11 @@ header .logo-wrap>.logo-last>ul>li:not(:last-child) {
   footer .footer-bg.top>div.footer-top-right .country-selector {
     padding: 20px 0 0 0;
   }
-  footer .footer-bg.bottom>div .quicklink>ul,
+  /* footer .footer-bg.bottom>div .quicklink>ul,
   footer .footer-bg.bottom>div .contact-details-left>ul,
   footer .footer-bg.bottom>div .contact-details-right ul.payment {
     display: none;
-  }
+  } */
   footer .contact-details-right.bottom {
     padding: 0;
   }
