@@ -30,6 +30,16 @@ export default function Home() {
   const [contactUs, setContactUs] = useState(false)
   const [currency, setCurrency] = useState(false)
   
+  useEffect(() => {
+    if (typeof window !== "undefined" && window?.innerWidth > 767) {
+      setMettaMuse(true)
+      setQuickLinks(true)
+      setFollowUs(true)
+      setContactUs(true)
+      setCurrency(true)
+    }
+  }, [window])
+
   const handleToggleMenu = () => {
     setIsShowMenu(prev => !prev);
   };
@@ -235,7 +245,7 @@ export default function Home() {
                 <div className="footer-top-right">
                   <div className="text-white top">
                     <h2 onClick={(() => setContactUs(!contactUs))}>CONTACT US</h2> 
-                    {contactUs || window.innerWidth > 767 &&
+                    {contactUs &&
                     <ul className="contact-detail">
                       <li className="phone-no"><a href="tel:+44 221 133 5360">+44 221 133 5360</a></li>
                     <li className="email"><a
@@ -245,7 +255,7 @@ export default function Home() {
                   </div>
                   <div className="text-white bottom">
                     <h2 onClick={(() => setCurrency(!currency))}>Currency</h2>
-                   {currency || window.innerWidth > 767 && <div className="country-selector">
+                   {currency && <div className="country-selector">
                       <label htmlFor="countries">USD</label>
                       {/* <select name="countries" id="countries">
                         <option value="">America</option>
@@ -264,7 +274,7 @@ export default function Home() {
                   <div className="link" id="desktopnav">
                     <div className="quicklink text-white">
                       <h2 onClick={(() => setMettaMuse(!mettaMuse))}>mettā muse</h2> 
-                      {mettaMuse || window.innerWidth > 767 &&
+                      {mettaMuse &&
                       <ul>
                         <li>About Us</li>
                         <li>Stories</li>
@@ -280,7 +290,7 @@ export default function Home() {
                   <div className="contact-details-container">
                     <div className="contact-details-left text-white">
                       <h2 onClick={(() => setQuickLinks(!quickLinks))}>Quick Links</h2> 
-                      {quickLinks || window.innerWidth > 767 &&
+                      {quickLinks &&
                       <ul>
                         <li>Orders & Shipping</li>
                         <li>Join/Login as a Seller</li>
@@ -297,7 +307,7 @@ export default function Home() {
                   <div className="contact-details-conatiner">
                     <div className="contact-details-right text-white top">
                       <h2 onClick={(() => setFollowUs(!followUs))}>Follow Us</h2>
-                      {followUs || window.innerWidth > 767 &&
+                      {followUs &&
                       <ul className="payment">
                         <li className="left-icons igram-left-icon"><a href="https://www.instagram.com/"
                           target="_blank" rel="noopener noreferrer"></a></li>
