@@ -190,8 +190,8 @@ export default function Home() {
             </div>
             <div className="product-right-col">
               <ul className="product-listing">
-                {products && products.map((product) => (
-                  <li className="products">
+                {products && products.map((product, key) => (
+                  <li key={key} className="products">
                     <Image src={product.thumbnail} alt="" width={300} height={462} />
                     <div className="product-content">
                       <h3 className="product-heading">{product.title}</h3>
