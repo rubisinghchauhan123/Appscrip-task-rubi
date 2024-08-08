@@ -24,11 +24,7 @@ export default function Home() {
   const router = useRouter();
   const [products, setProducts] = useState([])
   const { setIsShowMenu } = useContext(MenuContext);
-  const [mettaMuse, setMettaMuse] = useState(false)
-  const [quickLinks, setQuickLinks] = useState(false)
-  const [followUs, setFollowUs] = useState(false)
-  const [contactUs, setContactUs] = useState(false)
-  const [currency, setCurrency] = useState(false)
+
   const handleToggleMenu = () => {
     setIsShowMenu(prev => !prev);
   };
@@ -233,18 +229,17 @@ export default function Home() {
                 </div>
                 <div className="footer-top-right">
                   <div className="text-white top">
-                    <h2 onClick={(() => setContactUs(!contactUs))}>CONTACT US</h2> 
-                    {contactUs &&
+                    <h2>CONTACT US</h2>
                     <ul className="contact-detail">
                       <li className="phone-no"><a href="tel:+44 221 133 5360">+44 221 133 5360</a></li>
                     <li className="email"><a
                         href="mailto:customercare@mettamuse.com">customercare@mettamuse.com
                       </a></li>
-                    </ul>}
+                    </ul>
                   </div>
                   <div className="text-white bottom">
-                    <h2 onClick={(() => setCurrency(!currency))}>Currency</h2>
-                   {currency && <div className="country-selector">
+                    <h2>Currency</h2>
+                    <div className="country-selector">
                       <label htmlFor="countries">USD</label>
                       {/* <select name="countries" id="countries">
                         <option value="">America</option>
@@ -252,7 +247,7 @@ export default function Home() {
                         <option value="">Canada</option>
                         <option value="">Germany</option>
                       </select> */}
-                    </div>}
+                    </div>
                     <p className="country-text">Transactions will be completed in Euros and a currency
                       reference is available on hover.</p>
                   </div>
@@ -262,8 +257,7 @@ export default function Home() {
                 <div className="footer-col-nav">
                   <div className="link" id="desktopnav">
                     <div className="quicklink text-white">
-                      <h2 onClick={(() => setMettaMuse(!mettaMuse))}>mettā muse</h2> 
-                      {mettaMuse &&
+                      <h2>mettā muse</h2>
                       <ul>
                         <li>About Us</li>
                         <li>Stories</li>
@@ -271,15 +265,14 @@ export default function Home() {
                         <li>Boutiques</li>
                         <li>Contact Us</li>
                         <li>EU Compliances Docs</li>
-                      </ul>}
+                      </ul>
                     </div>
                   </div>
                 </div>
                 <div className="footer-col-ind-add">
                   <div className="contact-details-container">
                     <div className="contact-details-left text-white">
-                      <h2 onClick={(() => setQuickLinks(!quickLinks))}>Quick Links</h2> 
-                      {quickLinks &&
+                      <h2>Quick Links</h2>
                       <ul>
                         <li>Orders & Shipping</li>
                         <li>Join/Login as a Seller</li>
@@ -288,21 +281,20 @@ export default function Home() {
                         <li>FAQs</li>
                         <li>Privacy Policy</li>
                         <li>Terms & Conditions</li>
-                      </ul>}
+                      </ul>
                     </div>
                   </div>
                 </div>
                 <div className="footer-col-can-add">
                   <div className="contact-details-conatiner">
                     <div className="contact-details-right text-white top">
-                      <h2 onClick={(() => setFollowUs(!followUs))}>Follow Us</h2>
-                      {followUs &&
+                      <h2>Follow Us</h2>
                       <ul className="payment">
                         <li className="left-icons igram-left-icon"><a href="https://www.instagram.com/"
                           target="_blank" rel="noopener noreferrer"></a></li>
                         <li className="left-icons linldin-left-icon"><a href="https://in.linkedin.com/"
                           target="_blank" rel="noopener noreferrer"></a></li>
-                      </ul>}
+                      </ul>
                     </div>
                     <div className="contact-details-right text-white bottom">
                       <h2>mettā muse Accepts</h2>
